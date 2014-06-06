@@ -1,4 +1,4 @@
 Arduino-Code
 ============
 
-Arduino software coded with help from Google. Enjoy.
+Arduino software I coded for projects I make. Enjoy.
