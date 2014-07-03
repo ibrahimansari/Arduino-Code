@@ -1,18 +1,18 @@
 #include <Wire.h>
 
 void setup()
-{
+{  
   Wire.begin(4); // join i2c bus (address optional for master)
+  Wire.onRequest(requestEvent); // register event
 }
 
-byte x = 1;
 
-void loop()
+
+void loop(){
+//THIS IS COMPLETELY USELESS!
+}
+
+void requestEvent()
 {
-  Wire.beginTransmission(4); // transmit to device #4
-  Wire.write("x is ");        // sends five bytes
-  Wire.write(x);              // sends one byte  
-  Wire.endTransmission();    // stop transmitting
-
-  delay(500);
+  Wire.write("Hello "); // respond with 6 bytes of data 
 }
